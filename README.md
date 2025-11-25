@@ -94,7 +94,7 @@ Wandeln Sie das `match` - Statement in `if`/ `elif` - Statements um. Welche Schr
 - Arbeiten Sie sich in den bestehenden Code ein indem Sie die Funktionen in `tui.py` und `repo_csv.py` druchlesen und versuchen in eigenen Worten Ihren Banknachbarn zu erklären. (Jeder eine durchlesen und dem Nachbar erklären.)
 - Bearbeiten Sie die Theorieeinheit zu Funktionen.
 
-## Part 3: Verfollständigen
+## Part 3: Vervollständigen
 - Vervollständigen Sie das Programm indem Sie die Funktionen zur Logik des Programms ausprogrammieren.
 
 ## Part 4: Versionskontrolle
