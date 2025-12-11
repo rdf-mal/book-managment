@@ -92,7 +92,7 @@ def get_book_details_from_user():
     """prompts the user for book details and returns a book dictionary"""
     isbn = input("ISBN eingeben: ")
     titel = input("Titel eingeben: ")
-    fach = input("Fach eingeben: ")
+    fach = input("Categorie eingeben: ")
     while True:
         try:
             gesamt = int(input("Stückzahl eingeben: "))
@@ -112,6 +112,9 @@ def get_book_name_from_user():
     """prompts the user for a book name and returns it"""
     return input("Geben Sie den Namen des Buches ein: ")
 
+def get_isbn_from_user():
+    """prompts the user for a book name and returns it"""
+    return input("Geben Sie die ISBN des Buches ein: ")
 
 def wait_for_user_interaction():
     input("\n[Drücke Enter um fortzufahren...]")

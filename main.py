@@ -25,15 +25,35 @@ def main():
             case 1: # Alle Bücher anzeigen
                 tui.display_list_of_books(all_books)
             case 2: # Verfügbare Bücher anzeigen
-                pass  # TODO: implement this
+                available_books = management.filter_for_available_books(all_books)
+                tui.display_list_of_books(available_books)
             case 3: # Ausgeliehene Bücher anzeigen
-                pass  # TODO: implement this
+                borrowed_books = management.filter_for_borrowed_books(all_books)
+                tui.display_list_of_books(borrowed_books)
             case 4: # Buch hinzufügen
-                pass  # TODO: implement this
+                new_book = tui.get_book_details_from_user()
+                all_books.append(new_book)
+                tui.display_info(f"Buch {new_book["title"]} hinzugefügt.")
+                repo.save_books(file, all_books)
             case 5: # Buch löschen
-                pass # TODO: implement this
+                # User Namen des Buchs eingeben lassen:
+                book_name = tui.get_book_name_from_user()
+                if management.remove_book(book_name, all_books):
+                    tui.display_info(f"Buch {book_name} gelöscht.")
+                    repo.save_books(file, all_books)
+                else:
+                    tui.display_info(f"Buch {book_name} nicht gefunden.")
             case 6: # Buch ausleihen
-                pass # TODO: implement this
+                tui.display_list_of_books(all_books)
+                isbn = tui.get_isbn_from_user()
+                for book in all_books:
+                    if book["isbn"] == isbn:
+                        if management.borrow_book(book):
+                            tui.display_info(f"Buch {book["title"]} ausgeliehen")
+                        else:
+                            tui.display_error(f"Buch {book["title"]} nicht mehr verfügbar.")
+                        break
+
             case 7: # Buch zurückgeben
                 pass # TODO implement this
             case 0: # exit the programm
