@@ -103,8 +103,9 @@ def get_book_details_from_user():
     return {
         "isbn": isbn,
         "title": titel,
-        "subject": fach,
-        "total": gesamt
+        "categorie": fach,
+        "total": gesamt,
+        "available": gesamt
     }
 
 def get_book_name_from_user():
