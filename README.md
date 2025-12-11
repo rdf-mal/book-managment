@@ -98,3 +98,6 @@ Wandeln Sie das `match` - Statement in `if`/ `elif` - Statements um. Welche Schr
 - Pushen Sie den Commit von ihrem lokalen main Branch auf das remote Repo (GitHub)
 - Überprüfen Sie ob die Änderungen dort sichtbar sind.
 
+# License
+
+TODO:
